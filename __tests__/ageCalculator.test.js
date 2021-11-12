@@ -48,4 +48,9 @@ describe('AgeCalculator', () => {
     const calc = new AgeCalculator("foo");
     expect(calc.earthToJupiter(100)).toEqual(8);
   });
+
+  test('given a second argument in constuctor, should create a child AgeCalculator for life expectancy', () => {
+    const calc = newAgeCalculator(34, 100);
+    expect(calc.lifeExpCalc).toBe(AgeCalculator);
+  })
 });
