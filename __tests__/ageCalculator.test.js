@@ -14,5 +14,12 @@ describe('AgeCalculator', () => {
     expect(stringcalc.age).toEqual(null);
   });
 
-  
+  test('Should set this.age to null when given NaN or +-Infinity as input.', () => {
+    const nancalc = new AgeCalculator(NaN);
+    const infcalc = new AgeCalculator(Infinity);
+    const neginfcalc = new AgeCalculator(-Infinity);
+    expect(nancalc.age).toEqual(null);
+    expect(infcalc.age).toEqual(null);
+    expect(neginfcalc.age).toEqual(null);
+  });
 });
