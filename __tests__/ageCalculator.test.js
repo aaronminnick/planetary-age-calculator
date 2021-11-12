@@ -1,5 +1,3 @@
-import { exportAllDeclaration } from "@babel/types";
-import { testPathPatternToRegExp } from "jest-util";
 import AgeCalculator from "../src/ageCalculator";
 
 describe('AgeCalculator', () => {
@@ -22,4 +20,13 @@ describe('AgeCalculator', () => {
     expect(infcalc.age).toEqual(null);
     expect(neginfcalc.age).toEqual(null);
   });
+
+  test('Should calculate ages on other planets in constructor, set to properties.', () => {
+    const calc = new AgeCalculator(100);
+    expect(calc.mercuryAge).toEqual(416);
+    expect(calc.venusAge).toEqual(161);
+    expect(calc.marsAge).toEqual(53);
+    expect(calc.jupiterAge).toEqual(8);
+  });
+
 });
