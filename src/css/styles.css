@@ -11,16 +11,17 @@ body {
 }
 
 .orbit-container {
-
+  z-index: -1;
 }
 
 .orbit {
-  animation: orbit linear infinite paused;
-  border: 3px dotted whitesmoke;
+  --orbit-speed-multiplier: 5;
+  animation: orbit linear infinite running;
+  border: 2px dotted darkslategray;
   border-radius: 100%;
   position: absolute;
   top: 50%;
-  left: 45%;
+  left: 33%;
   height: var(--orbit-size);
   width: var(--orbit-size);
   --margin-correction: calc(-1 * var(--orbit-size)/2);
@@ -30,7 +31,7 @@ body {
 
 .planet {
   position: absolute;
-  border: .1px solid whitesmoke;
+  border: 2px solid whitesmoke;
   border-radius: 100%;
   height: var(--planet-size);
   width: var(--planet-size);
@@ -43,16 +44,17 @@ body {
   position: absolute;
   border: 3px solid whitesmoke;
   border-radius: 100%;
-  background-color: yellow;
+  background-color: rgb(224, 224, 94);
   height: 10vh;
   width: 10vh;
   top: 50%;
-  left: 45%;
+  left: 33%;
   margin-top: -5vh;
   margin-left: -5vh;
 }
 #orbit-mercury {
-  --orbit-size: 15vh;
+  --orbit-size: 14vh;
+  animation-duration: calc(var(--orbit-speed-multiplier) * .24s); 
 }
 
 #planet-mercury {
@@ -61,41 +63,51 @@ body {
 }
 
 #orbit-venus {
-  --orbit-size: 20vh;
+  --orbit-size: 21vh;
+  animation-duration: calc(var(--orbit-speed-multiplier) * .62s); 
 }
 
 #planet-venus {
-  --planet-size: calc(2.4vh + 4px);
+  --planet-size: calc(2.8vh + 4px);
   background-color:rgb(46, 107, 46);
 }
 
 #orbit-earth {
   --orbit-size: 30vh;
+  animation-duration: calc(var(--orbit-speed-multiplier) * 1s); 
 }
 
 #planet-earth {
-  --planet-size: calc(2.6vh + 4px);
+  --planet-size: calc(3vh + 4px);
   background-color: rgb(82, 92, 209);
 }
 
 #orbit-mars {
   --orbit-size: 40vh;
+  animation-duration: calc(var(--orbit-speed-multiplier) * 1.88s);
 }
 
 #planet-mars {
-  --planet-size: calc(1.4vh + 4px);
+  --planet-size: calc(2vh + 4px);
   background-color: red;
 }
 
 #orbit-jupiter {
-  --orbit-size: 75vh;
+  --orbit-size: 68vh;
+  animation-duration: calc(var(--orbit-speed-multiplier) * 11.88s);
 }
 
 #planet-jupiter {
-  --planet-size: calc(28.4vh + 4px);
+  --planet-size: calc(22vh + 4px);
   background-color: rgb(136, 82, 37);
 }
 
 @keyframes orbit {
-
+  100% {
+    -webkit-transform: rotate(360%);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
