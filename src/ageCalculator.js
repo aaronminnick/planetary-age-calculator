@@ -5,7 +5,7 @@ export default class AgeCalculator {
     } else {
       this.age = age;
     }
-    
+
     this.mercuryAge = this.earthToMercury(age);
     this.venusAge = this.earthToVenus(age);
     this.marsAge = this.earthToMars(age);
@@ -32,20 +32,23 @@ export default class AgeCalculator {
   }
 
   yearsToLive() {
-    let outputArray = [];
-    outputArray.push(this.lifeExpCalc.mercuryAge - this.mercuryAge);
-    outputArray.push(this.lifeExpCalc.venusAge - this.venusAge);
-    outputArray.push(this.lifeExpCalc.age - this.age);
-    outputArray.push(this.lifeExpCalc.marsAge - this.marsAge);
-    outputArray.push(this.lifeExpCalc.jupiterAge - this.jupiterAge);
+    if (this.lifeExpCalc) {
+      let outputArray = [];
+      outputArray.push(this.lifeExpCalc.mercuryAge - this.mercuryAge);
+      outputArray.push(this.lifeExpCalc.venusAge - this.venusAge);
+      outputArray.push(this.lifeExpCalc.age - this.age);
+      outputArray.push(this.lifeExpCalc.marsAge - this.marsAge);
+      outputArray.push(this.lifeExpCalc.jupiterAge - this.jupiterAge);
 
-    if (outputArray[0] >= 0) {
-      outputArray.unshift('remain');
-    } else {
-      outputArray = outputArray.map(element => Math.abs(element));
-      outputArray.unshift('passed');
+      if (outputArray[0] >= 0) {
+        outputArray.unshift('remain');
+      } else {
+        outputArray = outputArray.map(element => Math.abs(element));
+        outputArray.unshift('passed');
+      }
+
+      return outputArray;
     }
-
-    return outputArray;
+    return null;
   }
 }
