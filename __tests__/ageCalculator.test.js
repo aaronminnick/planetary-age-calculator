@@ -53,4 +53,11 @@ describe('AgeCalculator', () => {
     const calc = new AgeCalculator(34, 100);
     expect(calc.lifeExpCalc).toBeInstanceOf(AgeCalculator);
   })
+
+  test('yearsToLive method should return an array in format ["remain"||"passed", Mercury years, Venus years, Earth years, Mars years, Jupiter years]', () => {
+    const remain = new AgeCalculator(34, 100);
+    expect(remain.yearsToLive()).toEqual(['remain', 275, 107, 35, 6]);
+    const passed = new AgeCalculator(34, 20);
+    expect(passed.yearsToLive()).toEqual(['passed', 58, 22, 8, 1]);
+  });
 });
