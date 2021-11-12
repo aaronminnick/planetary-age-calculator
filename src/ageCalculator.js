@@ -25,10 +25,10 @@ export default class AgeCalculator {
   }
 
   earthToMars(years) {
-    return Math.floor(years/1.88)
+    return Math.floor(years/1.88);
   }
   earthToJupiter(years) {
-    return Math.floor(years/11.86)
+    return Math.floor(years/11.86);
   }
 
   yearsToLive() {

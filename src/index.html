@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Planetary Age Calculator</title>
+</head>
+<body>
+  <div class='container'>
+    <form id='age-entry'>
+      <input id='age' type='number' placeholder='Age (1-120)' min='1' max='120' required>
+      <input id='life-ex' type='number' placeholder='Life Expectancy (1-120)' min='1' max='120' required>
+      <button class='btn btn-dark' type="submit">Submit</button>
+    </form>
+    <div id='calculated-ages'>
+      <p>Age on Mercury: <span id='age-mercury'></span>. <span id ='life-ex-dif-mercury'></span> years <span class='life-ex-rp'></span> life expectancy.</p>
+      <p>Age on Venus: <span id='age-venus'></span>. <span id ='life-ex-dif-venus'></span> years <span class='life-ex-rp'></span> life expectancy.</p>
+      <p>Age on Earth: <span id='age-earth'></span>. <span id ='life-ex-dif-earth'></span> years <span class='life-ex-rp'></span> life expectancy.</p>
+      <p>Age on Mars: <span id='age-mars'></span>. <span id ='life-ex-dif-mars'></span> years <span class='life-ex-rp'></span> life expectancy.</p>
+      <p>Age on Jupiter: <span id='age-jupiter'></span>. <span id ='life-ex-dif-jupiter'></span> years <span class='life-ex-rp'></span> life expectancy.</p>
+    </div>
+  </div>
+</body>
+</html>
