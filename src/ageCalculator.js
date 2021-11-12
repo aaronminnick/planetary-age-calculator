@@ -6,9 +6,9 @@ export default class AgeCalculator {
       this.age = age;
     }
     this.mercuryAge = this.earthToMercury(age);
-    this.venusAge = Math.floor(age/.62);
-    this.marsAge = Math.floor(age/1.88);
-    this.jupiterAge = Math.floor(age/11.86);
+    this.venusAge = this.earthToVenus(age);
+    this.marsAge = this.earthToMars(age);
+    this.jupiterAge = this.earthToJupiter(age);
   }
 
   earthToMercury(years) {
@@ -16,13 +16,13 @@ export default class AgeCalculator {
   }
 
   earthToVenus(years) {
-
+    return Math.floor(years/.62);
   }
 
   earthToMars(years) {
-
+    return Math.floor(years/1.88)
   }
   earthToJupiter(years) {
-
+    return Math.floor(years/11.86)
   }
 }
