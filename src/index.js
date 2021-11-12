@@ -30,5 +30,10 @@ $('#age-entry').on('submit', (event) => {
       break;
   }
 
+  $('#entry-contents').fadeOut(500);
+  $('#entry-circle').css("animation-play-state", "running");
+  $('#entry-circle').delay(2400).fadeToggle(0);
+  $('#orbit-container').delay(2250).fadeToggle(400);
+  $('.orbit').css("animation-play-state", "running");
   $('#calculated-ages').show();
 });

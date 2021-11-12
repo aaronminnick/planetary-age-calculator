@@ -24,12 +24,14 @@
   </div>
 
   <div id='entry-circle'>
-    <h2>Please enter your age and life expectancy:</h2>
-    <form id='age-entry'>
-      <input id='age' type='number' placeholder='Age (1-120)' min='1' max='120' required>
-      <input id='life-ex' type='number' placeholder='Life Expectancy (1-120)' min='1' max='120' required>
-      <button class='btn btn-dark' type="submit">Submit</button>
-    </form>
+    <div id='entry-contents'>
+      <h2>Please enter your age on Earth and your life expectancy:</h2>
+      <form id='age-entry'>
+        <input id='age' type='number' placeholder='Earth Age (1-120)' min='1' max='120' required>
+        <input id='life-ex' type='number' placeholder='Life Expectancy (1-120)' min='1' max='120' required>
+        <button class='btn btn-dark' type="submit">Calculate</button>
+      </form>
+    </div>
   </div>
 
   <div id='calculated-ages'>

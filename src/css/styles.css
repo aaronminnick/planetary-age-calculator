@@ -1,9 +1,10 @@
 body {
   background-color: rgb(8, 8, 16);
-  overflow: none;
+  overflow: hidden;
 }
 
 #entry-circle{
+  animation: circle-to-earth 2s ease-in-out .55s paused;
   position: absolute;
   top: 25vh;
   left: calc(50% - 25vh);
@@ -17,22 +18,31 @@ body {
   width: 50vh;
 }
 
-.entry-circle h2 {
+#entry-contents {
   text-align: center;
-  font-size: 3vh;
+}
+
+#entry-contents h2 {
+  font-size: 2.5vh;
 }
 
 #calculated-ages {
   display: none;
+  position: absolute;
+  top: 25vh;
+  left: 66%;
+  color: whitesmoke;
 }
 
-.orbit-container {
+#orbit-container {
   z-index: -1;
+  display: none;
 }
 
 .orbit {
   --orbit-speed-multiplier: 7;
   animation: orbit linear infinite paused;
+  animation-delay: .5s;
   border: 2px dotted darkslategray;
   border-radius: 100%;
   position: absolute;
@@ -125,5 +135,20 @@ body {
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@keyframes circle-to-earth {
+  95% {
+    height: calc(3vh + 4px);
+    width: calc(3vh + 4px);
+    opacity: .8;
+    top: 48.5vh;
+    left: calc(33% - 16.5vh);
+    padding: 0vh;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
