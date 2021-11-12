@@ -5,14 +5,14 @@ export default class AgeCalculator {
     } else {
       this.age = age;
     }
-    this.mercuryAge = Math.floor(age/.24);
+    this.mercuryAge = this.earthToMercury(age);
     this.venusAge = Math.floor(age/.62);
     this.marsAge = Math.floor(age/1.88);
     this.jupiterAge = Math.floor(age/11.86);
   }
 
   earthToMercury(years) {
-
+    return Math.floor(years/.24);
   }
 
   earthToVenus(years) {
