@@ -11,5 +11,18 @@ export default class AgeCalculator {
     this.jupiterAge = Math.floor(age/11.86);
   }
 
+  earthToMercury(years) {
 
+  }
+
+  earthToVenus(years) {
+
+  }
+
+  earthToMars(years) {
+
+  }
+  earthToJupiter(years) {
+
+  }
 }

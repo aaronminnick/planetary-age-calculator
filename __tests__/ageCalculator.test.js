@@ -29,4 +29,23 @@ describe('AgeCalculator', () => {
     expect(calc.jupiterAge).toEqual(8);
   });
 
+  test('earthToMercury method should accept a number of Earth years and return Mercury years.', () => {
+    const calc = new AgeCalculator(foo);
+    expect(calc.earthToMercury(100)).toEqual(416);
+  });
+
+  test('earthToVenus method should accept a number of Earth years and return Venus years.', () => {
+    const calc = new AgeCalculator(foo);
+    expect(calc.earthToVenus(100)).toEqual(161);
+  });
+
+  test('earthToMars method should accept a number of Earth years and return Mars years.', () => {
+    const calc = new AgeCalculator(foo);
+    expect(calc.earthToMars(100)).toEqual(53);
+  });
+
+  test('earthToJupiter method should accept a number of Earth years and return Jupiter years.', () => {
+    const calc = new AgeCalculator(foo);
+    expect(calc.earthToJupiter(100)).toEqual(8);
+  });
 });
