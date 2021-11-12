@@ -50,7 +50,7 @@ describe('AgeCalculator', () => {
   });
 
   test('given a second argument in constuctor, should create a child AgeCalculator for life expectancy', () => {
-    const calc = newAgeCalculator(34, 100);
-    expect(calc.lifeExpCalc).toBe(AgeCalculator);
+    const calc = new AgeCalculator(34, 100);
+    expect(calc.lifeExpCalc).toBeInstanceOf(AgeCalculator);
   })
 });
