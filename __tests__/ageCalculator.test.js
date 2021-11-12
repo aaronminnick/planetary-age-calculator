@@ -60,4 +60,9 @@ describe('AgeCalculator', () => {
     const passed = new AgeCalculator(34, 20);
     expect(passed.yearsToLive()).toEqual(['passed', 58, 22, 14, 8, 1]);
   });
+
+  test('yearsToLive method should return null if called on AgeCalculator with no lifeExpCalc child', () => {
+    const calc = new AgeCalculator(34);
+    expect(calc.yearsToLive()).toEqual(null);
+  });
 });
