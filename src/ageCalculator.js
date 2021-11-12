@@ -1,5 +1,5 @@
 export default class AgeCalculator {
-  constructor(age) {
+  constructor(age, lifeExpect = 0) {
     if (typeof age !== 'number' || age !== age || age === Infinity || age === -Infinity) {
       this.age = null;
     } else {
@@ -9,6 +9,10 @@ export default class AgeCalculator {
     this.venusAge = this.earthToVenus(age);
     this.marsAge = this.earthToMars(age);
     this.jupiterAge = this.earthToJupiter(age);
+
+    if (lifeExpect > 0) {
+      this.lifeExpCalc = new AgeCalculator(lifeExpect);
+    }
   }
 
   earthToMercury(years) {
