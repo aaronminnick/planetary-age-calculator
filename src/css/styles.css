@@ -1,9 +1,25 @@
 body {
   background-color: rgb(8, 8, 16);
+  overflow: none;
 }
 
-.container {
-  margin-top: 2em;
+#entry-circle{
+  position: absolute;
+  top: 25vh;
+  left: calc(50% - 25vh);
+  padding: 12vh;
+  z-index: 1;
+  background-color: rgb(40, 60, 180);
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+  border-radius: 100%;
+  height: 50vh;
+  width: 50vh;
+}
+
+.entry-circle h2 {
+  text-align: center;
+  font-size: 3vh;
 }
 
 #calculated-ages {
@@ -15,8 +31,8 @@ body {
 }
 
 .orbit {
-  --orbit-speed-multiplier: 5;
-  animation: orbit linear infinite running;
+  --orbit-speed-multiplier: 7;
+  animation: orbit linear infinite paused;
   border: 2px dotted darkslategray;
   border-radius: 100%;
   position: absolute;
@@ -79,7 +95,7 @@ body {
 
 #planet-earth {
   --planet-size: calc(3vh + 4px);
-  background-color: rgb(82, 92, 209);
+  background-color: rgb(40, 60, 180);
 }
 
 #orbit-mars {
