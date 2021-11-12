@@ -11,7 +11,7 @@ describe('AgeCalculator', () => {
 
   test('Should set this.age to null when given other than a number as input.', () => {
     const stringcalc = new AgeCalculator('thirty four');
-    expect(calc.age).toEqual(null);
+    expect(stringcalc.age).toEqual(null);
   });
 
   

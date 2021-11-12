@@ -1,5 +1,9 @@
 export default class AgeCalculator {
   constructor(age) {
-    this.age = age;
+    if (typeof age !== 'number') {
+      this.age = null;
+    } else {
+      this.age = age;
+    }
   }
 }
