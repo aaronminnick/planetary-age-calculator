@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Planetary Age Calculator</title>
+</head>
+<body>
+  <div id='orbit-container'>
+    <div id='sun'></div>
+    <div class = 'orbit' id='orbit-mercury'>
+      <div class = 'planet' id='planet-mercury'></div>
+    </div>
+    <div class = 'orbit' id='orbit-venus'>
+      <div class = 'planet' id='planet-venus'></div>
+    </div>
+    <div class = 'orbit' id='orbit-earth'>
+      <div class = 'planet' id='planet-earth'></div>
+    </div>
+    <div class = 'orbit' id='orbit-mars'>
+      <div class = 'planet' id='planet-mars'></div>
+    </div>
+    <div class = 'orbit' id='orbit-jupiter'>
+      <div class = 'planet' id='planet-jupiter'></div>
+    </div>
+  </div>
+
+  <div id='entry-circle'>
+    <div id='entry-contents'>
+      <h2>Please enter your age on Earth and your life expectancy:</h2>
+      <form id='age-entry'>
+        <input id='age' type='number' placeholder='Earth Age (1-120)' min='1' max='120' required>
+        <input id='life-ex' type='number' placeholder='Life Expectancy (1-120)' min='1' max='120' required>
+        <button class='btn btn-dark' type="submit">Calculate</button>
+      </form>
+    </div>
+  </div>
+
+  <div id='calculated-ages'>
+    <p>Age on Mercury: <span id='age-mercury'></span>.</p>
+    <p><span id ='life-ex-dif-mercury'></span> years <span class='life-ex-rp'></span> life expectancy.</p>
+    <p>Age on Venus: <span id='age-venus'></span>.</p>
+    <p><span id ='life-ex-dif-venus'></span> years <span class='life-ex-rp'></span> life expectancy.</p>
+    <p>Age on Earth: <span id='age-earth'></span>.</p>
+    <p><span id ='life-ex-dif-earth'></span> years <span class='life-ex-rp'></span> life expectancy.</p>
+    <p>Age on Mars: <span id='age-mars'></span>.</p>
+    <p><span id ='life-ex-dif-mars'></span> years <span class='life-ex-rp'></span> life expectancy.</p>
+    <p>Age on Jupiter: <span id='age-jupiter'></span>.</p>
+    <p><span id ='life-ex-dif-jupiter'></span> years <span class='life-ex-rp'></span> life expectancy.</p>
+  </div>
+<script type="text/javascript" src="bundle.js"></script></body>
+</html>
