@@ -1,5 +1,11 @@
 body {
-  background-color: rgb(8, 8, 16);
+  --color-mercury: rgb(85, 60, 60);
+  --color-venus: rgb(46, 107, 46);
+  --color-earth: rgb(40, 60, 180);
+  --color-mars: rgb(200, 30, 30);
+  --color-jupiter: rgb(160, 91, 34);
+  --color-space: rgb(8, 8, 16);
+  background-color: var(--color-space);
   overflow: hidden;
 }
 
@@ -10,9 +16,9 @@ body {
   left: calc(50% - 25vh);
   padding: 12vh;
   z-index: 1;
-  background-color: rgb(40, 60, 180);
+  background-color: var(--color-earth);
   color: whitesmoke;
-  border: 2px solid whitesmoke;
+  border: 2px solid darkslategray;
   border-radius: 100%;
   height: 50vh;
   width: 50vh;
@@ -34,16 +40,41 @@ body {
   color: whitesmoke;
 }
 
+#age-mercury, #life-ex-dif-mercury {
+  font-weight: bold;
+  color: var(--color-mercury);
+}
+
+#age-venus, #life-ex-dif-venus {
+  font-weight: bold;
+  color: var(--color-venus);
+}
+
+#age-earth, #life-ex-dif-earth {
+  font-weight: bold;
+  color: var(--color-earth);
+}
+
+#age-mars, #life-ex-dif-mars {
+  font-weight: bold;
+  color: var(--color-mars);
+}
+
+#age-jupiter, #life-ex-dif-jupiter {
+  font-weight: bold;
+  color: var(--color-jupiter);
+}
+
 #orbit-container {
   z-index: -1;
   display: none;
 }
 
 .orbit {
-  --orbit-speed-multiplier: 7;
+  --orbit-speed-multiplier: 8;
   animation: orbit linear infinite paused;
   animation-delay: .5s;
-  border: 2px dotted darkslategray;
+  border: 4px double darkslategray;
   border-radius: 100%;
   position: absolute;
   top: 50%;
@@ -57,7 +88,7 @@ body {
 
 .planet {
   position: absolute;
-  border: 2px solid whitesmoke;
+  border: 2px solid darkslategray;
   border-radius: 100%;
   height: var(--planet-size);
   width: var(--planet-size);
@@ -68,7 +99,7 @@ body {
 
 #sun {
   position: absolute;
-  border: 3px solid whitesmoke;
+  border: 5px dashed whitesmoke;
   border-radius: 100%;
   background-color: rgb(224, 224, 94);
   height: 10vh;
@@ -77,35 +108,36 @@ body {
   left: 33%;
   margin-top: -5vh;
   margin-left: -5vh;
+  filter: blur(7px);
 }
 #orbit-mercury {
-  --orbit-size: 14vh;
+  --orbit-size: 15vh;
   animation-duration: calc(var(--orbit-speed-multiplier) * .24s); 
 }
 
 #planet-mercury {
-  --planet-size: calc(1vh + 4px);
-  background-color: rgb(77, 43, 43);
+  --planet-size: calc(1.4vh + 4px);
+  background-color: var(--color-mercury);
 }
 
 #orbit-venus {
-  --orbit-size: 21vh;
+  --orbit-size: 22vh;
   animation-duration: calc(var(--orbit-speed-multiplier) * .62s); 
 }
 
 #planet-venus {
   --planet-size: calc(2.8vh + 4px);
-  background-color:rgb(46, 107, 46);
+  background-color: var(--color-venus);
 }
 
 #orbit-earth {
-  --orbit-size: 30vh;
+  --orbit-size: 31vh;
   animation-duration: calc(var(--orbit-speed-multiplier) * 1s); 
 }
 
 #planet-earth {
   --planet-size: calc(3vh + 4px);
-  background-color: rgb(40, 60, 180);
+  background-color: var(--color-earth);
 }
 
 #orbit-mars {
@@ -115,7 +147,7 @@ body {
 
 #planet-mars {
   --planet-size: calc(2vh + 4px);
-  background-color: red;
+  background-color: var(--color-mars);
 }
 
 #orbit-jupiter {
@@ -125,7 +157,7 @@ body {
 
 #planet-jupiter {
   --planet-size: calc(22vh + 4px);
-  background-color: rgb(136, 82, 37);
+  background-color: var(--color-jupiter);
 }
 
 @keyframes orbit {
