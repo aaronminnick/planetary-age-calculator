@@ -9,6 +9,8 @@
 
 This is the week 5 independent project at [Epicodus](https://www.epicodus.com). The application will accept an age and life expectancy and convert the number of years into the equivalent years on Mercury, Venus, Mars, and Jupiter.
 
+Check out the application [HERE!](https://aaronminnick.github.io/planetary-age-calculator/)
+
 ### Attribution:
 The planet orbit animation was adapted from [this codepen.io page.](https://codepen.io/rss/pen/EWobGz)
 
