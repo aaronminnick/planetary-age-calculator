@@ -34,12 +34,16 @@ $ npm install
 $ npm run start
 ```
 
-* **Or** run the 'build' sript, then open index.html from the dist folder with your default browser:
+* **Or** run the 'build' script, then open index.html from the dist folder with your default browser:
 ```
 $ npm run build
 $ start dist/index.html
 ```
-
+### TDD
+To run tests using Jest, you can use the npm script 'test':
+```
+$ npm run test
+```
 
 ### Known Bugs/Issues:
 * None
